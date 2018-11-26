@@ -16,16 +16,14 @@ do
 	echo "$a"
         ./setbits.sh "$a"
 
-        if [ "$a" -eq 16 ]
-        then
-            a=0
-        fi
 
-        if [ "$a" -eq 0 ]
+        if [ "$a" -eq 16 ]
         then
             gpio write 4 1 
             sleep 1
             gpio write 4 0 
+	echo grogram is done after 1-15 
+	break
         fi
     fi
 done
